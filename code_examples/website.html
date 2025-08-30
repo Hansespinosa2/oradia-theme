@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VS Code Theme Showcase</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header large-padding flex-row center-content shadowed-background" id="header-section" data-theme="light" aria-label="Main Site Header">
+    <nav class="navigation-bar" role="navigation" aria-label="Primary Navigation Menu">
+      <ul class="nav-list inline-flex spaced-items">
+        <li class="nav-item"><a href="#home" class="nav-link active" data-section="home" title="Go to homepage">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link" data-section="about" title="Learn more about us">About Us</a></li>
+        <li class="nav-item"><a href="#services" class="nav-link" data-section="services" title="Explore our services">Services</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link" data-section="contact" title="Contact our team">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-area grid-layout wide-columns full-height-section with-padding responsive-section" id="main-content" role="main" aria-labelledby="main-title">
+    <section id="home" class="section home-section highlight-background full-width-row" aria-describedby="home-description">
+      <h1 id="main-title" class="headline extra-bold large-text center-text uppercase">Welcome to the VS Code Theme Demo Page</h1>
+      <p id="home-description" class="paragraph with-spacing justified-text">This page demonstrates how various elements like <strong>inline text formatting</strong>, <em>emphasis</em>, <code>inline-code-snippets</code>, and <mark>highlighted text</mark> render under a custom VS Code theme.</p>
+      <button class="primary-button rounded-corners large-button hover-bright" type="button" aria-pressed="false">Click Me For More</button>
+    </section>
+
+    <section id="about" class="section about-section striped-background" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="section-title medium-text bold-text uppercase">About Our Project</h2>
+      <article class="article-card card-style shadow-hover" data-id="article-01">
+        <h3 class="article-heading">Building a Theme</h3>
+        <p class="article-paragraph">Creating a VS Code theme requires understanding how colors map to syntax tokens, UI elements, and semantic highlighting across multiple programming languages.</p>
+      </article>
+    </section>
+
+    <section id="services" class="section services-section with-grid four-columns responsive-cards" aria-labelledby="services-heading">
+      <h2 id="services-heading" class="section-title">Our Services</h2>
+      <div class="service-card card with-border gradient-background" data-service="design">
+        <h3>Design</h3><p>We design themes with color harmony, accessibility compliance, and aesthetic appeal.</p>
+      </div>
+      <div class="service-card card with-border gradient-background" data-service="development">
+        <h3>Development</h3><p>We develop fully responsive, cross-platform, and user-friendly web applications with scalable architectures.</p>
+      </div>
+      <div class="service-card card with-border gradient-background" data-service="consulting">
+        <h3>Consulting</h3><p>We consult with teams on UI/UX principles, productivity enhancements, and coding standards for professional development.</p>
+      </div>
+      <div class="service-card card with-border gradient-background" data-service="support">
+        <h3>Support</h3><p>We provide 24/7 support with detailed documentation, tutorials, and live assistance for troubleshooting issues.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section form-area" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="section-title">Contact Us</h2>
+      <form action="/submit" method="post" class="contact-form wide-form styled-form shadowed-form" autocomplete="on">
+        <label for="name" class="form-label">Name:</label>
+        <input id="name" name="name" type="text" class="form-input large-input" required placeholder="Enter your full name" />
+        <label for="email" class="form-label">Email:</label>
+        <input id="email" name="email" type="email" class="form-input large-input" required placeholder="Enter your email address" />
+        <label for="message" class="form-label">Message:</label>
+        <textarea id="message" name="message" class="form-textarea long-textarea" rows="6" required placeholder="Type your detailed message here with any relevant context or feedback for us"></textarea>
+        <button type="submit" class="submit-button gradient-button wide-button hover-glow">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="main-footer padded-footer center-text small-text light-background" role="contentinfo" aria-label="Site Footer">
+    <p>&copy; 2025 Theme Showcase Inc. | <a href="#privacy" class="footer-link">Privacy Policy</a> | <a href="#terms" class="footer-link">Terms of Service</a> | <span class="footer-note">All Rights Reserved.</span></p>
+  </footer>
+</body>
+</html>

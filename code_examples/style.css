@@ -1,0 +1,147 @@
+/* Root Variables for Theme Showcase */
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --background-color: #f3f4f6;
+  --dark-background: #111827;
+  --text-color: #1f2937;
+  --light-text: #f9fafb;
+  --gradient-bg: linear-gradient(90deg, #3b82f6 0%, #10b981 100%);
+  --shadow-style: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+}
+
+/* General Resets and Base Styles */
+body, h1, h2, h3, p, ul, li, figure, figcaption, blockquote {
+  margin: 0; padding: 0; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--background-color); 
+  color: var(--text-color); 
+  line-height: 1.6; 
+  font-size: 1rem; 
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh;
+}
+
+/* Header Styling */
+.main-header {
+  background: var(--gradient-bg);
+  box-shadow: var(--shadow-style);
+  padding: 1rem 2rem;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.nav-list {
+  display: flex; 
+  gap: 1.5rem; 
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none; 
+  color: var(--light-text); 
+  font-weight: bold; 
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--secondary-color);
+}
+
+/* Main Sections */
+.section {
+  padding: 4rem 2rem; 
+  border-bottom: 1px solid #d1d5db;
+}
+
+.section-title {
+  font-size: 2rem; 
+  margin-bottom: 1.5rem; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  color: var(--primary-color);
+}
+
+/* Buttons */
+button, .submit-button, .primary-button {
+  background: var(--primary-color); 
+  border: none; 
+  padding: 0.8rem 2rem; 
+  color: var(--light-text); 
+  border-radius: var(--border-radius); 
+  font-weight: bold; 
+  cursor: pointer; 
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .submit-button:hover, .primary-button:hover {
+  background: var(--secondary-color); 
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  background: #fff; 
+  border-radius: var(--border-radius); 
+  box-shadow: var(--shadow-style); 
+  padding: 2rem; 
+  margin: 1rem; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Form */
+.contact-form {
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+  background: #fff; 
+  padding: 2rem; 
+  border-radius: var(--border-radius); 
+  box-shadow: var(--shadow-style);
+}
+
+.form-input, .form-textarea {
+  border: 1px solid #9ca3af; 
+  border-radius: var(--border-radius); 
+  padding: 0.75rem; 
+  font-size: 1rem; 
+  width: 100%;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: var(--primary-color); 
+  outline: none; 
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Footer */
+.main-footer {
+  background: var(--dark-background); 
+  color: var(--light-text); 
+  text-align: center; 
+  padding: 1.5rem 2rem; 
+  font-size: 0.875rem; 
+  margin-top: auto;
+}
+
+.footer-link {
+  color: var(--secondary-color); 
+  text-decoration: none; 
+  margin: 0 0.5rem; 
+  transition: text-decoration 0.3s ease;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}

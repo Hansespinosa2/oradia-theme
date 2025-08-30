@@ -1,0 +1,64 @@
+<!-- VS Code Theme Showcase - ERB Syntax -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ERB Showcase</title>
+</head>
+<body>
+  <!-- Inline Ruby with output -->
+  <h1><%= "Hello, #{current_user&.name || 'Guest User'} -- today is #{Time.now.strftime('%A, %B %d, %Y at %I:%M %p')} and PI=#{Math::PI}, E=#{Math::E}, GoldenRatio=#{1.6180339887}" %></h1>
+
+  <!-- Control Flow -->
+  <% if @items.present? && @items.length > 5 && current_user&.admin? %>
+    <p><%= "Admin view: You have #{@items.length} items. First item=#{@items.first.inspect}, Last item=#{@items.last.inspect}, Current time=#{Time.now.to_s}, User=#{current_user.email rescue 'N/A'}" %></p>
+  <% elsif @items.present? && @items.length <= 5 %>
+    <p><%= "You only have #{@items.length} items: #{@items.map(&:upcase).join(', ')}" %></p>
+  <% else %>
+    <p><%= "No items available at #{Time.now}, please add something to your list, User=#{current_user&.id || 'unknown'}" %></p>
+  <% end %>
+
+  <!-- Loops -->
+  <ul>
+    <% @items&.each_with_index do |item, i| %>
+      <li><%= "Item[#{i}] => #{item.capitalize} (length=#{item.length}, reversed=#{item.reverse}, vowels=#{item.count('aeiou')}, random=#{rand(1..100)})" %></li>
+    <% end %>
+  </ul>
+
+  <!-- Inline iteration -->
+  <p><%= @numbers.map { |n| "n=#{n}, n^2=#{n**2}, n^3=#{n**3}, sqrt=#{Math.sqrt(n).round(3)}, log=#{Math.log(n).round(3)}" }.join(" | ") %></p>
+
+  <!-- Case statement -->
+  <% case @status %>
+  <% when :active %>
+    <div><%= "Status: ACTIVE, User=#{current_user&.email}, Time=#{Time.now}, Random=#{rand}" %></div>
+  <% when :inactive %>
+    <div><%= "Status: INACTIVE, User=#{current_user&.id}, Items=#{@items&.size || 0}, Timestamp=#{Time.now.to_i}" %></div>
+  <% else %>
+    <div><%= "Status: UNKNOWN, Debug Info => status=#{@status.inspect}, env=#{Rails.env}, pid=#{Process.pid}" %></div>
+  <% end %>
+
+  <!-- Forms -->
+  <%= form_with model: @user, url: user_path(@user), method: :patch, local: true, html: { class: "user-form wide-line-example highlight-test"} do |f| %>
+    <div>
+      <%= f.label :name, "Full Name:" %>
+      <%= f.text_field :name, value: @user.name, placeholder: "Enter your full name here (long placeholder string to fill width)" %>
+    </div>
+    <div>
+      <%= f.label :email, "Email Address:" %>
+      <%= f.email_field :email, value: @user.email, class: "input-wide highlight-theme-test", data: { info: "This is a long data attribute string to test theme highlighting in ERB" } %>
+    </div>
+    <div>
+      <%= f.label :password, "Password:" %>
+      <%= f.password_field :password, placeholder: "••••••••••", autocomplete: "new-password" %>
+    </div>
+    <%= f.submit "Update Profile at #{Time.now} (long button text to fill screen)" %>
+  <% end %>
+
+  <!-- Long inline Ruby expressions -->
+  <footer>
+    <%= "Footer Info => Time=#{Time.now}, Env=#{Rails.env}, Ruby=#{RUBY_VERSION}, Rails=#{Rails.version}, Memory=#{`ps -o rss= -p #{Process.pid}`.to_i / 1024}MB, Host=#{Socket.gethostname}, Random=#{rand(1_000..9_999)}" %>
+  </footer>
+</body>
+</html>
