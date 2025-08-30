@@ -1,0 +1,21 @@
+{
+  "name": "oradia-theme",
+  "displayName": "Oradia",
+  "description": "A theme to simplify and reduce the amount of colors on screen with vscode.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Oradia",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Oradia-color-theme.json"
+      }
+    ]
+  }
+}
