@@ -3,7 +3,7 @@
   "displayName": "Oradia",
   "publisher": "Hansespinosa2",
   "description": "A theme to simplify and reduce the amount of colors on screen with vscode.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.103.0"
   },
