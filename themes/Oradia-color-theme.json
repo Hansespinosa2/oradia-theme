@@ -1231,6 +1231,14 @@
       }
     },
     {
+      "name": "constant.language.ruby",
+      "scope": "constant.language.ruby",
+      "settings": {
+        "foreground": "#F0C6D4",
+        "fontStyle": "bold"
+      }
+    },
+    {
       "name": "support.function.core.ruby",
       "scope": "support.function.core.ruby",
       "settings": {
