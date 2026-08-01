@@ -1,0 +1,21 @@
+# Oradia demo configuration (YAML uses "#" line comments).
+name: oradia-demo
+version: 1.4.0
+maxRetries: 3            # trailing note
+defaultRole: viewer
+
+features:
+  semanticHighlighting: true
+  variants:
+    - refined
+    - mono
+    - fixed-hue
+    - data-first
+    - contrast
+
+roles: [admin, editor, viewer]
+
+thresholds:
+  minTokenLength: 8
+  active: true
+  ratio: 0.75

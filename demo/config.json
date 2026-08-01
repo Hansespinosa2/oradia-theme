@@ -1,0 +1,10 @@
+{
+  "name": "oradia-demo",
+  "version": "1.0.0",
+  "active": true,
+  "archived": false,
+  "note": null,
+  "counts": { "items": 42, "orders": 108, "ratio": 2.57 },
+  "tags": ["widget", "gizmo", "sprocket"],
+  "owner": { "email": "demo@example.com", "admin": true }
+}

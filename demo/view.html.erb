@@ -1,0 +1,14 @@
+<%# LOOK AT: subtle raised popout behind <%= %> and <% %>; comparison operators NOT red %>
+<% if @items.present? && @items.length > 5 && current_user&.admin? %>
+  <p><%= "Admin view: You have #{@items.length} items. First=#{@items.first.inspect}, Last=#{@items.last.inspect}, User=#{current_user.email rescue 'N/A'}" %></p>
+<% elsif @items.present? && @items.length <= 5 %>
+  <ul>
+    <% @items.each_with_index do |item, i| %>
+      <li class="row <%= i.even? ? 'even' : 'odd' %>">
+        <%= item.name %> — <%= item.active ? 'active' : 'inactive' %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No items. <%= link_to 'Add one', new_item_path %></p>
+<% end %>

@@ -1,0 +1,16 @@
+{
+  "folders": [{ "path": "." }],
+  "settings": {
+    "workbench.colorTheme": "Oradia",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.occurrencesHighlight": "singleFile",
+    "editor.minimap.enabled": true,
+    "workbench.editor.showTabs": "multiple",
+    "oradia.regionHighlight.enable": true,
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+    "workbench.colorCustomizations": {}
+  }
+}

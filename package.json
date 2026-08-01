@@ -2,20 +2,122 @@
   "name": "oradia-theme",
   "displayName": "Oradia",
   "publisher": "Hansespinosa2",
-  "description": "A theme to simplify and reduce the amount of colors on screen with vscode.",
-  "version": "0.1.2",
+  "description": "A calm, muted, green-forward dark theme built on one principle: visual weight tracks importance. Names/types pop, the boring tier recedes, brackets stay on-palette, and errors/warnings share one vocabulary — with terminal + ERB polish for Copilot CLI workflows.",
+  "version": "1.0.0",
+  "keywords": [
+    "theme",
+    "dark theme",
+    "dark",
+    "green",
+    "muted",
+    "minimal",
+    "calm",
+    "low contrast",
+    "ruby",
+    "erb"
+  ],
+  "galleryBanner": {
+    "color": "#1b1b1b",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.103.0"
   },
   "categories": [
     "Themes"
   ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
+    "configuration": {
+      "title": "Oradia",
+      "properties": {
+        "oradia.regionHighlight.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Draw subtle raised boxes behind the inner expression of single-line dynamic regions (ERB <%= %> / <% %>, ${...} template interpolations, {{ }} mustaches) so they pop out of surrounding markup. Purely visual; does not affect language servers. Vue files are left to the Vue extension."
+        }
+      }
+    },
+    "configurationDefaults": {
+      "[erb]": {
+        "editor.language.colorizedBracketPairs": [["(", ")"], ["[", "]"], ["{", "}"]]
+      },
+      "[html]": {
+        "editor.language.colorizedBracketPairs": [["(", ")"], ["[", "]"], ["{", "}"]]
+      },
+      "[php]": {
+        "editor.language.colorizedBracketPairs": [["(", ")"], ["[", "]"], ["{", "}"]]
+      }
+    },
+    "colors": [
+      {
+        "id": "oradia.templateOutputBackground",
+        "description": "Background box for ERB output regions (<%= ... %>). Same subtle lift as logic.",
+        "defaults": {
+          "dark": "#ffffff08",
+          "light": "#00000009",
+          "highContrast": "#ffffff16"
+        }
+      },
+      {
+        "id": "oradia.templateOutputBorder",
+        "description": "Border of the ERB output box (gives a faint raised look).",
+        "defaults": {
+          "dark": "#ffffff14",
+          "light": "#00000014",
+          "highContrast": "#ffffff30"
+        }
+      },
+      {
+        "id": "oradia.templateLogicBackground",
+        "description": "Background box for ERB logic regions (<% ... %>). A hair fainter than output.",
+        "defaults": {
+          "dark": "#ffffff08",
+          "light": "#00000009",
+          "highContrast": "#ffffff16"
+        }
+      },
+      {
+        "id": "oradia.templateLogicBorder",
+        "description": "Border of the ERB logic box (gives a faint raised look).",
+        "defaults": {
+          "dark": "#ffffff14",
+          "light": "#00000014",
+          "highContrast": "#ffffff30"
+        }
+      },
+      {
+        "id": "oradia.interpolationBackground",
+        "description": "Background box for ${...} and {{ ... }} interpolations.",
+        "defaults": {
+          "dark": "#ffffff0d",
+          "light": "#0000000e",
+          "highContrast": "#ffffff1c"
+        }
+      },
+      {
+        "id": "oradia.interpolationBorder",
+        "description": "Border of the interpolation box (gives a faint raised look).",
+        "defaults": {
+          "dark": "#ffffff1a",
+          "light": "#0000001a",
+          "highContrast": "#ffffff38"
+        }
+      }
+    ],
     "themes": [
       {
         "label": "Oradia",
         "uiTheme": "vs-dark",
         "path": "./themes/Oradia-color-theme.json"
+      },
+      {
+        "label": "Oradia Classic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Oradia-Classic-color-theme.json"
       }
     ]
   },
@@ -23,5 +125,5 @@
     "type": "git",
     "url": "https://github.com/Hansespinosa2/oradia-theme"
   },
-  "license": "SEE MIT LICENSE IN LICENSE.txt"
+  "license": "MIT"
 }

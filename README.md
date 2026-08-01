@@ -1,16 +1,58 @@
-# oradia-theme README
+# Oradia
 
-## Working with Markdown
+A calm, muted, **green-forward dark theme** built on one principle:
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+> **Visual weight tracks importance.** Warmth and saturation are spent only where they
+> signal something — errors, dirty state, focus — so everything else can stay quiet.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+Oradia is designed for long, focused sessions across many languages, and is tuned for a
+Copilot-CLI-in-the-terminal workflow.
 
-## For more information
+## Themes
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+- **Oradia** — the primary "Slate-Graphite" palette. Neutral `#1b1b1b` base; names, types,
+  and keys carry the signal while plain variables and strings recede.
+- **Oradia Classic** — the original Oradia, preserved unchanged.
 
-**Enjoy!**
+Select via **Preferences: Color Theme** (`Ctrl+K Ctrl+T`) → **Oradia**.
+
+## What makes it purposeful
+
+- **Signal separation** — the important tier (names/types/keys/headings) pops; the "boring"
+  tier (variables, strings) sits back in a neutral gray-green.
+- **Bold literals** — `true`/`false`/`nil`, `True`/`False`/`None`, and booleans in JS/TS/Go
+  render bold, because a literal truth value is worth noticing.
+- **On-palette brackets** — nested `()[]{}` brighten *gently* with depth in a single
+  blue-violet hue (a subtle nesting hint, never a rainbow). Stray brackets stay quiet.
+- **ERB popout** — a subtle raised box sits behind the inner expression of single-line
+  `<%= %>` / `<% %>` regions (and `${ }` / `{{ }}` interpolations), so dynamic bits lift out
+  of surrounding markup. Toggle with `oradia.regionHighlight.enable`.
+- **Terminal + Copilot CLI** — a full 16-color ANSI palette plus **command decorations**
+  (green success / red failure dots), with additions/removals legible in diffs.
+- **One UI vocabulary** — red = error, amber = warn, cyan = info, green = OK/active, applied
+  consistently across squiggles, the status bar, notifications, badges, and inputs.
+- **Focus ladder** — the active tab, focused pane, badges, and focus rings all use the one
+  green accent so "where am I" reads at a glance; unsaved files get a distinct teal marker.
+
+## Settings
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| `oradia.regionHighlight.enable` | `true` | Draw the subtle raised popout behind single-line ERB / `${ }` / `{{ }}` regions. Purely visual; Vue files are left to the Vue extension. |
+
+## Try the demo scene
+
+The `demo/` folder is a single scene that exercises every feature without hunting:
+
+1. **File → Open Workspace from File…** → `demo/demo.code-workspace` (it sets the theme and
+   the relevant editor/terminal settings).
+2. Walk the checklist in `demo/TOUR.md` (also a markdown legibility demo).
+3. In a terminal, run `./terminal-tour.ps1` to see command decorations, the ANSI palette,
+   and a colored `git diff`.
+
+## Feedback
+
+Issues and ideas: <https://github.com/Hansespinosa2/oradia-theme>
+
+**Enjoy the quiet.**
+

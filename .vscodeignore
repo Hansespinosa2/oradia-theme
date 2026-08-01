@@ -1,6 +1,12 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+.gitattributes
 vsc-extension-quickstart.md
 
-.code_examples/**
+# Dev-only - not part of the published theme
+preview/**
+demo/**
+code_examples/**
+**/node_modules/**
+**/*.vsix
