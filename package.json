@@ -4,6 +4,7 @@
   "publisher": "Hansespinosa2",
   "description": "A calm, muted, green-forward dark theme built on one principle: visual weight tracks importance. Names/types pop, the boring tier recedes, brackets stay on-palette, and errors/warnings share one vocabulary — with terminal + ERB polish for Copilot CLI workflows.",
   "version": "1.0.1",
+  "icon": "images/oradia-icon.png",
   "keywords": [
     "theme",
     "dark theme",

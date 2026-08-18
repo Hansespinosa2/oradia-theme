@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Oradia focused work icon</title>
+  <desc id="desc">A graphite terminal panel with the Oradia wordmark and a quiet green signal motif.</desc>
+  <rect width="512" height="512" rx="96" fill="#151b18"/>
+  <rect x="34" y="34" width="444" height="444" rx="72" fill="#1b1b1b"/>
+
+  <g fill="none" stroke="#3b4b42" stroke-width="3" opacity=".75">
+    <circle cx="386" cy="132" r="42"/>
+    <circle cx="386" cy="132" r="64"/>
+    <circle cx="386" cy="132" r="86"/>
+  </g>
+  <path d="M386 84v48h48" fill="none" stroke="#6d927e" stroke-width="4" opacity=".8"/>
+
+  <rect x="72" y="70" width="368" height="372" rx="30" fill="#1b1b1b" stroke="#3b4b42" stroke-width="3"/>
+  <path d="M72 126h368" stroke="#3b4b42" stroke-width="3"/>
+  <circle cx="101" cy="98" r="8" fill="#83ad8d"/>
+  <circle cx="126" cy="98" r="8" fill="#6d927e"/>
+  <circle cx="151" cy="98" r="8" fill="#4f715d"/>
+
+  <text x="104" y="205" fill="#d8e0d8" font-family="Georgia, 'Times New Roman', serif" font-size="61" font-weight="400" letter-spacing="-2">Oradia</text>
+  <text x="108" y="237" fill="#8da095" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" letter-spacing="4">FOCUSED WORK</text>
+
+  <rect x="104" y="277" width="304" height="111" rx="13" fill="#151b18" stroke="#3b4b42" stroke-width="2"/>
+  <circle cx="126" cy="301" r="4" fill="#83ad8d"/>
+  <text x="143" y="307" fill="#aab9ad" font-family="'SFMono-Regular', Consolas, monospace" font-size="18">&gt; oradia-theme</text>
+  <text x="124" y="347" fill="#83ad8d" font-family="'SFMono-Regular', Consolas, monospace" font-size="18">+ quiet signal</text>
+  <path d="M124 367h102" stroke="#3b4b42" stroke-width="3" stroke-linecap="round"/>
+</svg>
